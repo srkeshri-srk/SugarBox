@@ -20,6 +20,8 @@
 		E1BC24562B06CA5D0038CFDD /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BC24502B06CA5D0038CFDD /* APIRequest.swift */; };
 		E1BC24572B06CA5D0038CFDD /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BC24512B06CA5D0038CFDD /* NetworkError.swift */; };
 		E1BC24582B06CA5D0038CFDD /* JSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BC24522B06CA5D0038CFDD /* JSONParser.swift */; };
+		E1BC245C2B06CAE50038CFDD /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BC245B2B06CAE50038CFDD /* HomeModel.swift */; };
+		E1BC245E2B06CAF00038CFDD /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BC245D2B06CAF00038CFDD /* HomeViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,8 @@
 		E1BC24502B06CA5D0038CFDD /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
 		E1BC24512B06CA5D0038CFDD /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		E1BC24522B06CA5D0038CFDD /* JSONParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONParser.swift; sourceTree = "<group>"; };
+		E1BC245B2B06CAE50038CFDD /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
+		E1BC245D2B06CAF00038CFDD /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,8 +86,9 @@
 		E1BC24482B06C5B60038CFDD /* Module */ = {
 			isa = PBXGroup;
 			children = (
-				E1BC24442B06C3E80038CFDD /* Home.storyboard */,
-				E1BC24462B06C3FC0038CFDD /* HomeViewController.swift */,
+				E1BC245F2B06CAF60038CFDD /* Model */,
+				E1BC245A2B06CAD70038CFDD /* Views */,
+				E1BC24602B06CAFA0038CFDD /* ViewModel */,
 			);
 			path = Module;
 			sourceTree = "<group>";
@@ -118,6 +123,31 @@
 				E1BC24522B06CA5D0038CFDD /* JSONParser.swift */,
 			);
 			path = NetworkLayer;
+			sourceTree = "<group>";
+		};
+		E1BC245A2B06CAD70038CFDD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E1BC24442B06C3E80038CFDD /* Home.storyboard */,
+				E1BC24462B06C3FC0038CFDD /* HomeViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E1BC245F2B06CAF60038CFDD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E1BC245B2B06CAE50038CFDD /* HomeModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E1BC24602B06CAFA0038CFDD /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				E1BC245D2B06CAF00038CFDD /* HomeViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -193,6 +223,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E1BC24312B06C3230038CFDD /* AppDelegate.swift in Sources */,
+				E1BC245E2B06CAF00038CFDD /* HomeViewModel.swift in Sources */,
 				E1BC24572B06CA5D0038CFDD /* NetworkError.swift in Sources */,
 				E1BC24582B06CA5D0038CFDD /* JSONParser.swift in Sources */,
 				E1BC24562B06CA5D0038CFDD /* APIRequest.swift in Sources */,
@@ -200,6 +231,7 @@
 				E1BC24532B06CA5D0038CFDD /* NetworkLayer+DataTask.swift in Sources */,
 				E1BC24332B06C3230038CFDD /* SceneDelegate.swift in Sources */,
 				E1BC24542B06CA5D0038CFDD /* NetworkLayer.swift in Sources */,
+				E1BC245C2B06CAE50038CFDD /* HomeModel.swift in Sources */,
 				E1BC24472B06C3FC0038CFDD /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
