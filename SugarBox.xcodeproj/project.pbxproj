@@ -14,6 +14,12 @@
 		E1BC24452B06C3E80038CFDD /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1BC24442B06C3E80038CFDD /* Home.storyboard */; };
 		E1BC24472B06C3FC0038CFDD /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BC24462B06C3FC0038CFDD /* HomeViewController.swift */; };
 		E1BC244C2B06C6AA0038CFDD /* Color.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1BC244B2B06C6AA0038CFDD /* Color.xcassets */; };
+		E1BC24532B06CA5D0038CFDD /* NetworkLayer+DataTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BC244D2B06CA5D0038CFDD /* NetworkLayer+DataTask.swift */; };
+		E1BC24542B06CA5D0038CFDD /* NetworkLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BC244E2B06CA5D0038CFDD /* NetworkLayer.swift */; };
+		E1BC24552B06CA5D0038CFDD /* URLGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BC244F2B06CA5D0038CFDD /* URLGenerator.swift */; };
+		E1BC24562B06CA5D0038CFDD /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BC24502B06CA5D0038CFDD /* APIRequest.swift */; };
+		E1BC24572B06CA5D0038CFDD /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BC24512B06CA5D0038CFDD /* NetworkError.swift */; };
+		E1BC24582B06CA5D0038CFDD /* JSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BC24522B06CA5D0038CFDD /* JSONParser.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +32,12 @@
 		E1BC24442B06C3E80038CFDD /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		E1BC24462B06C3FC0038CFDD /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		E1BC244B2B06C6AA0038CFDD /* Color.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Color.xcassets; sourceTree = "<group>"; };
+		E1BC244D2B06CA5D0038CFDD /* NetworkLayer+DataTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkLayer+DataTask.swift"; sourceTree = "<group>"; };
+		E1BC244E2B06CA5D0038CFDD /* NetworkLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLayer.swift; sourceTree = "<group>"; };
+		E1BC244F2B06CA5D0038CFDD /* URLGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLGenerator.swift; sourceTree = "<group>"; };
+		E1BC24502B06CA5D0038CFDD /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
+		E1BC24512B06CA5D0038CFDD /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		E1BC24522B06CA5D0038CFDD /* JSONParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONParser.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +71,7 @@
 			isa = PBXGroup;
 			children = (
 				E1BC24492B06C5C00038CFDD /* App Lifecycle */,
+				E1BC24592B06CA670038CFDD /* NetworkLayer */,
 				E1BC24482B06C5B60038CFDD /* Module */,
 				E1BC244A2B06C5CF0038CFDD /* Resources */,
 				E1BC243E2B06C3260038CFDD /* Info.plist */,
@@ -92,6 +105,19 @@
 				E1BC243B2B06C3260038CFDD /* LaunchScreen.storyboard */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		E1BC24592B06CA670038CFDD /* NetworkLayer */ = {
+			isa = PBXGroup;
+			children = (
+				E1BC244D2B06CA5D0038CFDD /* NetworkLayer+DataTask.swift */,
+				E1BC244E2B06CA5D0038CFDD /* NetworkLayer.swift */,
+				E1BC244F2B06CA5D0038CFDD /* URLGenerator.swift */,
+				E1BC24502B06CA5D0038CFDD /* APIRequest.swift */,
+				E1BC24512B06CA5D0038CFDD /* NetworkError.swift */,
+				E1BC24522B06CA5D0038CFDD /* JSONParser.swift */,
+			);
+			path = NetworkLayer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -167,7 +193,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				E1BC24312B06C3230038CFDD /* AppDelegate.swift in Sources */,
+				E1BC24572B06CA5D0038CFDD /* NetworkError.swift in Sources */,
+				E1BC24582B06CA5D0038CFDD /* JSONParser.swift in Sources */,
+				E1BC24562B06CA5D0038CFDD /* APIRequest.swift in Sources */,
+				E1BC24552B06CA5D0038CFDD /* URLGenerator.swift in Sources */,
+				E1BC24532B06CA5D0038CFDD /* NetworkLayer+DataTask.swift in Sources */,
 				E1BC24332B06C3230038CFDD /* SceneDelegate.swift in Sources */,
+				E1BC24542B06CA5D0038CFDD /* NetworkLayer.swift in Sources */,
 				E1BC24472B06C3FC0038CFDD /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
