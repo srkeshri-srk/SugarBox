@@ -13,9 +13,9 @@ class HomeViewModel {
     var homeModel: HomeModel?
     
     func fetchDataFromAPI() {
-        guard let url = URL(string: "https://apigw.sboxdc.com/ecm/v2/super/feeds/zee5-home/details?page=1&perPage=20") else { return }
+        guard let url = URL(string: Constants.NetworkLayer.homeDetailsURL) else { return }
         
-        let apiRequest = APIRequest(url: url, method: .GET, headers: nil, queryParams: nil, body: nil)
+        let apiRequest = APIRequest(url: url, method: .GET, headers: nil, queryParams: ["page": 1, "perPage": 20], body: nil)
         
         networkLayerServices.dataTask(apiRequest) { (result: Result<HomeModel, NetworkError>) in
             switch result {

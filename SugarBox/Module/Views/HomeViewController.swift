@@ -8,9 +8,14 @@
 import UIKit
 
 class HomeViewController: UIViewController {
+    
+    let home = HomeViewModel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        print(Constants.NetworkLayer.homeDetailsURL)
+        home.fetchDataFromAPI()
 
     }
 }

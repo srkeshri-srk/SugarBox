@@ -1,0 +1,14 @@
+//
+//  Config.xcconfig
+//  SugarBox
+//
+//  Created by Shreyansh Raj  Keshri on 17/11/23.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+
+BASE_URL = apigw.sboxdc.com
+IMAGE_BASE_URL = static01.sboxdc.com/images/
+VERSION = v2

@@ -22,6 +22,8 @@
 		E1BC24582B06CA5D0038CFDD /* JSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BC24522B06CA5D0038CFDD /* JSONParser.swift */; };
 		E1BC245C2B06CAE50038CFDD /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BC245B2B06CAE50038CFDD /* HomeModel.swift */; };
 		E1BC245E2B06CAF00038CFDD /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BC245D2B06CAF00038CFDD /* HomeViewModel.swift */; };
+		E1BC24632B06CF130038CFDD /* ConfigManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BC24622B06CF130038CFDD /* ConfigManager.swift */; };
+		E1BC24662B06CF940038CFDD /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BC24652B06CF940038CFDD /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +44,9 @@
 		E1BC24522B06CA5D0038CFDD /* JSONParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONParser.swift; sourceTree = "<group>"; };
 		E1BC245B2B06CAE50038CFDD /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
 		E1BC245D2B06CAF00038CFDD /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		E1BC24612B06CE3C0038CFDD /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
+		E1BC24622B06CF130038CFDD /* ConfigManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigManager.swift; sourceTree = "<group>"; };
+		E1BC24652B06CF940038CFDD /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,7 +82,9 @@
 				E1BC24492B06C5C00038CFDD /* App Lifecycle */,
 				E1BC24592B06CA670038CFDD /* NetworkLayer */,
 				E1BC24482B06C5B60038CFDD /* Module */,
+				E1BC24672B06CF980038CFDD /* Comman */,
 				E1BC244A2B06C5CF0038CFDD /* Resources */,
+				E1BC24642B06CF1D0038CFDD /* Configuration */,
 				E1BC243E2B06C3260038CFDD /* Info.plist */,
 			);
 			path = SugarBox;
@@ -148,6 +155,23 @@
 				E1BC245D2B06CAF00038CFDD /* HomeViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		E1BC24642B06CF1D0038CFDD /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				E1BC24612B06CE3C0038CFDD /* Config.xcconfig */,
+				E1BC24622B06CF130038CFDD /* ConfigManager.swift */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		E1BC24672B06CF980038CFDD /* Comman */ = {
+			isa = PBXGroup;
+			children = (
+				E1BC24652B06CF940038CFDD /* Constants.swift */,
+			);
+			path = Comman;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -229,10 +253,12 @@
 				E1BC24562B06CA5D0038CFDD /* APIRequest.swift in Sources */,
 				E1BC24552B06CA5D0038CFDD /* URLGenerator.swift in Sources */,
 				E1BC24532B06CA5D0038CFDD /* NetworkLayer+DataTask.swift in Sources */,
+				E1BC24662B06CF940038CFDD /* Constants.swift in Sources */,
 				E1BC24332B06C3230038CFDD /* SceneDelegate.swift in Sources */,
 				E1BC24542B06CA5D0038CFDD /* NetworkLayer.swift in Sources */,
 				E1BC245C2B06CAE50038CFDD /* HomeModel.swift in Sources */,
 				E1BC24472B06C3FC0038CFDD /* HomeViewController.swift in Sources */,
+				E1BC24632B06CF130038CFDD /* ConfigManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -252,6 +278,7 @@
 /* Begin XCBuildConfiguration section */
 		E1BC243F2B06C3260038CFDD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E1BC24612B06CE3C0038CFDD /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -315,6 +342,7 @@
 		};
 		E1BC24402B06C3260038CFDD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E1BC24612B06CE3C0038CFDD /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -371,6 +399,7 @@
 		};
 		E1BC24422B06C3260038CFDD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E1BC24612B06CE3C0038CFDD /* Config.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -398,6 +427,7 @@
 		};
 		E1BC24432B06C3260038CFDD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E1BC24612B06CE3C0038CFDD /* Config.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
