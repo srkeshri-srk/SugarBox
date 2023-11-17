@@ -11,6 +11,7 @@
 		E186B72C2B0787DF0069B4FD /* OTTContentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E186B72A2B0787DF0069B4FD /* OTTContentTableViewCell.xib */; };
 		E186B7302B078ADA0069B4FD /* MovieContentCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E186B72E2B078ADA0069B4FD /* MovieContentCollectionViewCell.swift */; };
 		E186B7312B078ADA0069B4FD /* MovieContentCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E186B72F2B078ADA0069B4FD /* MovieContentCollectionViewCell.xib */; };
+		E19722722B07D55F005429E9 /* CustomHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19722712B07D55F005429E9 /* CustomHeaderTableViewCell.swift */; };
 		E1BC24312B06C3230038CFDD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BC24302B06C3230038CFDD /* AppDelegate.swift */; };
 		E1BC24332B06C3230038CFDD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BC24322B06C3230038CFDD /* SceneDelegate.swift */; };
 		E1BC243A2B06C3260038CFDD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1BC24392B06C3260038CFDD /* Assets.xcassets */; };
@@ -35,6 +36,7 @@
 		E186B72A2B0787DF0069B4FD /* OTTContentTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OTTContentTableViewCell.xib; sourceTree = "<group>"; };
 		E186B72E2B078ADA0069B4FD /* MovieContentCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieContentCollectionViewCell.swift; sourceTree = "<group>"; };
 		E186B72F2B078ADA0069B4FD /* MovieContentCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieContentCollectionViewCell.xib; sourceTree = "<group>"; };
+		E19722712B07D55F005429E9 /* CustomHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomHeaderTableViewCell.swift; sourceTree = "<group>"; };
 		E1BC242D2B06C3230038CFDD /* SugarBox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SugarBox.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1BC24302B06C3230038CFDD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E1BC24322B06C3230038CFDD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -73,6 +75,7 @@
 			children = (
 				E186B7292B0787DF0069B4FD /* OTTContentTableViewCell.swift */,
 				E186B72A2B0787DF0069B4FD /* OTTContentTableViewCell.xib */,
+				E19722712B07D55F005429E9 /* CustomHeaderTableViewCell.swift */,
 			);
 			path = "Table Cells";
 			sourceTree = "<group>";
@@ -277,6 +280,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E1BC24312B06C3230038CFDD /* AppDelegate.swift in Sources */,
+				E19722722B07D55F005429E9 /* CustomHeaderTableViewCell.swift in Sources */,
 				E1BC245E2B06CAF00038CFDD /* HomeViewModel.swift in Sources */,
 				E1BC24572B06CA5D0038CFDD /* NetworkError.swift in Sources */,
 				E1BC24582B06CA5D0038CFDD /* JSONParser.swift in Sources */,

@@ -9,9 +9,17 @@ import UIKit
 
 class MovieContentCollectionViewCell: UICollectionViewCell {
 
+    @IBOutlet weak var artworkImageView: UIImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
+        setupUI()
+    }
+    
+    private func setupUI() {
+        artworkImageView.layer.cornerRadius = 10.0
+        artworkImageView.layer.masksToBounds = true
     }
 
 }

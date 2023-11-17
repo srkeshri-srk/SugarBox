@@ -44,4 +44,8 @@ extension OTTContentTableViewCell: UICollectionViewDelegate, UICollectionViewDat
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: (UIScreen.main.bounds.width - 10)*0.4, height: 100)
     }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets(top: 0, left: 15, bottom: 0, right: 0)
+    }
 }

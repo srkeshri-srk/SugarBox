@@ -19,16 +19,16 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jg1-8V-9EV">
                         <rect key="frame" x="0.0" y="0.0" width="257" height="131"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Poster" translatesAutoresizingMaskIntoConstraints="NO" id="10J-gC-D5h">
-                                <rect key="frame" x="5" y="0.0" width="247" height="131"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Poster" translatesAutoresizingMaskIntoConstraints="NO" id="10J-gC-D5h">
+                                <rect key="frame" x="5" y="5" width="247" height="121"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="10J-gC-D5h" secondAttribute="bottom" id="OiN-aY-F0G"/>
+                            <constraint firstAttribute="bottom" secondItem="10J-gC-D5h" secondAttribute="bottom" constant="5" id="OiN-aY-F0G"/>
                             <constraint firstItem="10J-gC-D5h" firstAttribute="leading" secondItem="Jg1-8V-9EV" secondAttribute="leading" constant="5" id="Vcg-CH-jWq"/>
                             <constraint firstAttribute="trailing" secondItem="10J-gC-D5h" secondAttribute="trailing" constant="5" id="iQk-lN-ieX"/>
-                            <constraint firstItem="10J-gC-D5h" firstAttribute="top" secondItem="Jg1-8V-9EV" secondAttribute="top" id="vcF-Sw-uee"/>
+                            <constraint firstItem="10J-gC-D5h" firstAttribute="top" secondItem="Jg1-8V-9EV" secondAttribute="top" constant="5" id="vcF-Sw-uee"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -41,6 +41,9 @@
                 <constraint firstAttribute="bottom" secondItem="Jg1-8V-9EV" secondAttribute="bottom" id="woY-fF-Fe2"/>
             </constraints>
             <size key="customSize" width="257" height="131"/>
+            <connections>
+                <outlet property="artworkImageView" destination="10J-gC-D5h" id="Ag5-cm-RBJ"/>
+            </connections>
             <point key="canvasLocation" x="238.93129770992365" y="48.239436619718312"/>
         </collectionViewCell>
     </objects>

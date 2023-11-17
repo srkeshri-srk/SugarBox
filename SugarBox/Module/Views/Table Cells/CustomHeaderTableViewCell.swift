@@ -1,0 +1,59 @@
+//
+//  CustomHeaderTableViewCell.swift
+//  SugarBox
+//
+//  Created by Shreyansh Raj  Keshri on 17/11/23.
+//
+
+import UIKit
+
+class CustomHeaderTableViewCell: UITableViewHeaderFooterView {
+    private let title: UILabel = {
+        let label = UILabel()
+        label.textColor = .white
+        label.font = UIFont.systemFont(ofSize: 22.0)
+        label.textAlignment = .left
+        return label
+    }()
+    
+    private let sepratorView: UIView = {
+        let view = UIView()
+        view.backgroundColor = .blueIII
+        view.layer.cornerRadius = view.bounds.size.width / 2
+        view.layer.masksToBounds = true
+        return view
+    }()
+    
+    override init(reuseIdentifier: String?) {
+        super.init(reuseIdentifier: reuseIdentifier)
+        setupUI()
+    }
+    
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        setupUI()
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    private func setupUI() {
+        title.translatesAutoresizingMaskIntoConstraints = false
+        sepratorView.translatesAutoresizingMaskIntoConstraints = false
+        
+        contentView.addSubview(title)
+        contentView.addSubview(sepratorView)
+        
+        NSLayoutConstraint.activate([
+            sepratorView.leadingAnchor.constraint(equalTo: self.contentView.leadingAnchor, constant: 15),
+            sepratorView.topAnchor.constraint(equalTo: self.contentView.topAnchor, constant: 5),
+            sepratorView.bottomAnchor.constraint(equalTo: self.contentView.bottomAnchor, constant: -5),
+            sepratorView.widthAnchor.constraint(equalToConstant: 3),
+            title.centerYAnchor.constraint(equalTo: sepratorView.centerYAnchor),
+            title.leadingAnchor.constraint(equalTo: sepratorView.leadingAnchor, constant: 15),
+            title.trailingAnchor.constraint(equalTo: self.contentView.trailingAnchor, constant: -15)
+        ])
+    }
+    
+    func setTitle(value: String) {
+        self.title.text = value
+    }
+}
