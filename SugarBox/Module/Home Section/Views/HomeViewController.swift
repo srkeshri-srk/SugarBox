@@ -8,16 +8,29 @@
 import UIKit
 
 class HomeViewController: UIViewController {
-    
     @IBOutlet weak var tableview: UITableView!
     
     let homeVM: HomeProtocol = HomeViewModel()
+    let spinner: UIActivityIndicatorView = {
+        let spinner = UIActivityIndicatorView(style: .large)
+        spinner.hidesWhenStopped = true
+        return spinner
+    }()
+    
+    private var currentPage: Int = 1 {
+        didSet {
+            print(currentPage)
+            fetchData()
+        }
+    }
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupUI()
         setupTabelView()
+        fetchData()
     }
     
     private func setupUI() {
@@ -37,8 +50,18 @@ class HomeViewController: UIViewController {
     }
     
     func fetchData() {
-        homeVM.fetchDataFromAPI {
-            print("Hello!!")
+        homeVM.fetchDataFromAPI(currentPage: currentPage) {
+            DispatchQueue.main.async {
+                self.spinner.stopAnimating()
+//                self.tableview.reloadData()
+                print("Heyy!!")
+            }
+        }
+    }
+    
+    func doPagination() {
+        if currentPage < homeVM.paginationLimit {
+            self.currentPage += 1
         }
     }
 }

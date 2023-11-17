@@ -53,16 +53,26 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
             UIView.animate(withDuration: 0.1, delay: 0, options: UIView.AnimationOptions(), animations: {
                 self.navigationController?.setNavigationBarHidden(true, animated: true)
 //                self.navigationController?.setToolbarHidden(true, animated: true)
-                print("Hide")
             }, completion: nil)
             
         } else {
             UIView.animate(withDuration: 0.1, delay: 0, options: UIView.AnimationOptions(), animations: {
                 self.navigationController?.setNavigationBarHidden(false, animated: true)
 //                self.navigationController?.setToolbarHidden(false, animated: true)
-                print("Unhide")
             }, completion: nil)
         }
     }
-
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+       let lastSectionIndex = tableView.numberOfSections - 1
+       let lastRowIndex = tableView.numberOfRows(inSection: lastSectionIndex) - 1
+       if indexPath.section ==  lastSectionIndex && indexPath.row == lastRowIndex {
+           spinner.startAnimating()
+           spinner.frame = CGRect(x: 0, y: 0, width: tableView.bounds.width, height: 44.0)
+           self.doPagination()
+           self.tableview.tableFooterView = spinner
+           self.tableview.tableFooterView?.isHidden = false
+       }
+   }
+    
 }
