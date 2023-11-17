@@ -9,13 +9,26 @@ import UIKit
 
 class HomeViewController: UIViewController {
     
-    let home = HomeViewModel()
+    let homeVM: HomeProtocol = HomeViewModel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print(Constants.NetworkLayer.homeDetailsURL)
-        home.fetchDataFromAPI()
-
+        setupUI()
+        setupTabelView()
+    }
+    
+    private func setupUI() {
+        title = Constants.Home.Title
+    }
+    
+    private func setupTabelView() {
+        
+    }
+    
+    func fetchData() {
+        homeVM.fetchDataFromAPI {
+            print("Hello!!")
+        }
     }
 }

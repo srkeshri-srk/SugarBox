@@ -8,11 +8,16 @@
 import Foundation
 
 
-class HomeViewModel {
-    let networkLayerServices = NetworkLayerServices()
-    var homeModel: HomeModel?
+protocol HomeProtocol: AnyObject {
+    func fetchDataFromAPI(completion: @escaping ()->Void)
+}
+
+
+class HomeViewModel: HomeProtocol {
+    private let networkLayerServices = NetworkLayerServices()
+    private var homeModel: HomeModel?
     
-    func fetchDataFromAPI() {
+    func fetchDataFromAPI(completion: @escaping ()->Void) {
         guard let url = URL(string: Constants.NetworkLayer.homeDetailsURL) else { return }
         
         let apiRequest = APIRequest(url: url, method: .GET, headers: nil, queryParams: ["page": 1, "perPage": 20], body: nil)
