@@ -21,7 +21,7 @@ class HomeViewController: UIViewController {
     }
     
     private func setupUI() {
-        title = Constants.Home.Title
+        title = Constants.Home.title
         let textAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
         navigationController?.navigationBar.titleTextAttributes = textAttributes
         self.view.backgroundColor = .darkBlueI
@@ -31,8 +31,9 @@ class HomeViewController: UIViewController {
         tableview.delegate = self
         tableview.dataSource = self
         tableview.backgroundColor = .clear
-        tableview.register(UINib(nibName: Constants.Home.OTTContentTableViewCell, bundle: nil), forCellReuseIdentifier: Constants.Home.OTTContentTableViewCell)
-        tableview.register(CustomHeaderTableViewCell.self, forHeaderFooterViewReuseIdentifier: Constants.Home.CustomHeaderTableViewCell)
+        tableview.register(UINib(nibName: Constants.Home.carouselTableViewCell, bundle: nil), forCellReuseIdentifier: Constants.Home.carouselTableViewCell)
+        tableview.register(UINib(nibName: Constants.Home.ottContentTableViewCell, bundle: nil), forCellReuseIdentifier: Constants.Home.ottContentTableViewCell)
+        tableview.register(CustomHeaderTableViewCell.self, forHeaderFooterViewReuseIdentifier: Constants.Home.customHeaderTableViewCell)
     }
     
     func fetchData() {

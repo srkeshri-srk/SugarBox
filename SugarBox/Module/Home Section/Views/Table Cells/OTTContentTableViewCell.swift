@@ -26,6 +26,6 @@ class OTTContentTableViewCell: UITableViewCell {
         collectionview.delegate = self
         collectionview.dataSource = self
         collectionview.backgroundColor = .clear
-        collectionview.register(UINib(nibName: Constants.Home.MovieContentCollectionViewCell, bundle: nil), forCellWithReuseIdentifier: Constants.Home.MovieContentCollectionViewCell)
+        collectionview.register(UINib(nibName: Constants.Home.movieContentCollectionViewCell, bundle: nil), forCellWithReuseIdentifier: Constants.Home.movieContentCollectionViewCell)
     }
 }

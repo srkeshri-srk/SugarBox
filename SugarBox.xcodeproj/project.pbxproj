@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E1157FD42B07FE9900AB81F3 /* CarouselTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1157FD22B07FE9900AB81F3 /* CarouselTableViewCell.swift */; };
+		E1157FD52B07FE9900AB81F3 /* CarouselTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1157FD32B07FE9900AB81F3 /* CarouselTableViewCell.xib */; };
 		E186B72B2B0787DF0069B4FD /* OTTContentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E186B7292B0787DF0069B4FD /* OTTContentTableViewCell.swift */; };
 		E186B72C2B0787DF0069B4FD /* OTTContentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E186B72A2B0787DF0069B4FD /* OTTContentTableViewCell.xib */; };
 		E186B7302B078ADA0069B4FD /* MovieContentCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E186B72E2B078ADA0069B4FD /* MovieContentCollectionViewCell.swift */; };
@@ -34,6 +36,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E1157FD22B07FE9900AB81F3 /* CarouselTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselTableViewCell.swift; sourceTree = "<group>"; };
+		E1157FD32B07FE9900AB81F3 /* CarouselTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CarouselTableViewCell.xib; sourceTree = "<group>"; };
 		E186B7292B0787DF0069B4FD /* OTTContentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTTContentTableViewCell.swift; sourceTree = "<group>"; };
 		E186B72A2B0787DF0069B4FD /* OTTContentTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OTTContentTableViewCell.xib; sourceTree = "<group>"; };
 		E186B72E2B078ADA0069B4FD /* MovieContentCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieContentCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -77,6 +81,8 @@
 		E186B72D2B0787E20069B4FD /* Table Cells */ = {
 			isa = PBXGroup;
 			children = (
+				E1157FD32B07FE9900AB81F3 /* CarouselTableViewCell.xib */,
+				E1157FD22B07FE9900AB81F3 /* CarouselTableViewCell.swift */,
 				E186B72A2B0787DF0069B4FD /* OTTContentTableViewCell.xib */,
 				E186B7292B0787DF0069B4FD /* OTTContentTableViewCell.swift */,
 				E19722752B07F118005429E9 /* OTTContentTVCell+CollectionView.swift */,
@@ -280,6 +286,7 @@
 				E1BC24452B06C3E80038CFDD /* Home.storyboard in Resources */,
 				E186B72C2B0787DF0069B4FD /* OTTContentTableViewCell.xib in Resources */,
 				E1BC244C2B06C6AA0038CFDD /* Color.xcassets in Resources */,
+				E1157FD52B07FE9900AB81F3 /* CarouselTableViewCell.xib in Resources */,
 				E1BC243D2B06C3260038CFDD /* LaunchScreen.storyboard in Resources */,
 				E1BC243A2B06C3260038CFDD /* Assets.xcassets in Resources */,
 				E186B7312B078ADA0069B4FD /* MovieContentCollectionViewCell.xib in Resources */,
@@ -298,6 +305,7 @@
 				E1BC245E2B06CAF00038CFDD /* HomeViewModel.swift in Sources */,
 				E19722742B07F0A1005429E9 /* HomeViewController+TableView.swift in Sources */,
 				E1BC24572B06CA5D0038CFDD /* NetworkError.swift in Sources */,
+				E1157FD42B07FE9900AB81F3 /* CarouselTableViewCell.swift in Sources */,
 				E1BC24582B06CA5D0038CFDD /* JSONParser.swift in Sources */,
 				E1BC24562B06CA5D0038CFDD /* APIRequest.swift in Sources */,
 				E1BC24552B06CA5D0038CFDD /* URLGenerator.swift in Sources */,

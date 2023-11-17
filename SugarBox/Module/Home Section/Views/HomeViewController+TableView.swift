@@ -13,12 +13,21 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell: OTTContentTableViewCell = tableView.dequeueReusableCell(withIdentifier: Constants.Home.OTTContentTableViewCell, for: indexPath) as! OTTContentTableViewCell
-        return cell
+        if indexPath.section == 0 {
+            let cell: CarouselTableViewCell = tableView.dequeueReusableCell(withIdentifier: Constants.Home.carouselTableViewCell, for: indexPath) as! CarouselTableViewCell
+            return cell
+        } else {
+            let cell: OTTContentTableViewCell = tableView.dequeueReusableCell(withIdentifier: Constants.Home.ottContentTableViewCell, for: indexPath) as! OTTContentTableViewCell
+            return cell
+        }
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 100.0
+        if indexPath.section == 0 {
+            return 250.0
+        } else {
+            return 100.0
+        }
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -26,9 +35,13 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let view = tableView.dequeueReusableHeaderFooterView(withIdentifier: Constants.Home.CustomHeaderTableViewCell) as! CustomHeaderTableViewCell
-        view.setTitle(value: "Movie Section \(section + 1)")
-        return view
+        if section == 0 {
+            return nil
+        } else {
+            let view = tableView.dequeueReusableHeaderFooterView(withIdentifier: Constants.Home.customHeaderTableViewCell) as! CustomHeaderTableViewCell
+            view.setTitle(value: "Movie Section \(section + 1)")
+            return view
+        }
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {

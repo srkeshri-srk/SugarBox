@@ -10,10 +10,11 @@ import Foundation
 struct Constants {
     //Home Landing
     struct Home {
-        static let Title = "SugarBox"
-        static let OTTContentTableViewCell = "OTTContentTableViewCell"
-        static let MovieContentCollectionViewCell = "MovieContentCollectionViewCell"
-        static let CustomHeaderTableViewCell = "CustomHeaderTableViewCell"
+        static let title = "SugarBox"
+        static let ottContentTableViewCell = "OTTContentTableViewCell"
+        static let movieContentCollectionViewCell = "MovieContentCollectionViewCell"
+        static let customHeaderTableViewCell = "CustomHeaderTableViewCell"
+        static let carouselTableViewCell = "CarouselTableViewCell"
     }
     
     //Network Layer
