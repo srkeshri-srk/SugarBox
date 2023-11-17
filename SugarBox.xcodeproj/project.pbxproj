@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E186B72B2B0787DF0069B4FD /* OTTContentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E186B7292B0787DF0069B4FD /* OTTContentTableViewCell.swift */; };
+		E186B72C2B0787DF0069B4FD /* OTTContentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E186B72A2B0787DF0069B4FD /* OTTContentTableViewCell.xib */; };
+		E186B7302B078ADA0069B4FD /* MovieContentCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E186B72E2B078ADA0069B4FD /* MovieContentCollectionViewCell.swift */; };
+		E186B7312B078ADA0069B4FD /* MovieContentCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E186B72F2B078ADA0069B4FD /* MovieContentCollectionViewCell.xib */; };
 		E1BC24312B06C3230038CFDD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BC24302B06C3230038CFDD /* AppDelegate.swift */; };
 		E1BC24332B06C3230038CFDD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BC24322B06C3230038CFDD /* SceneDelegate.swift */; };
 		E1BC243A2B06C3260038CFDD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1BC24392B06C3260038CFDD /* Assets.xcassets */; };
@@ -27,6 +31,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E186B7292B0787DF0069B4FD /* OTTContentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTTContentTableViewCell.swift; sourceTree = "<group>"; };
+		E186B72A2B0787DF0069B4FD /* OTTContentTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OTTContentTableViewCell.xib; sourceTree = "<group>"; };
+		E186B72E2B078ADA0069B4FD /* MovieContentCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieContentCollectionViewCell.swift; sourceTree = "<group>"; };
+		E186B72F2B078ADA0069B4FD /* MovieContentCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieContentCollectionViewCell.xib; sourceTree = "<group>"; };
 		E1BC242D2B06C3230038CFDD /* SugarBox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SugarBox.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1BC24302B06C3230038CFDD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E1BC24322B06C3230038CFDD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -60,6 +68,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E186B72D2B0787E20069B4FD /* Table Cells */ = {
+			isa = PBXGroup;
+			children = (
+				E186B7292B0787DF0069B4FD /* OTTContentTableViewCell.swift */,
+				E186B72A2B0787DF0069B4FD /* OTTContentTableViewCell.xib */,
+			);
+			path = "Table Cells";
+			sourceTree = "<group>";
+		};
+		E186B7322B078ADD0069B4FD /* Collection Cells */ = {
+			isa = PBXGroup;
+			children = (
+				E186B72E2B078ADA0069B4FD /* MovieContentCollectionViewCell.swift */,
+				E186B72F2B078ADA0069B4FD /* MovieContentCollectionViewCell.xib */,
+			);
+			path = "Collection Cells";
+			sourceTree = "<group>";
+		};
 		E1BC24242B06C3230038CFDD = {
 			isa = PBXGroup;
 			children = (
@@ -137,6 +163,8 @@
 			children = (
 				E1BC24442B06C3E80038CFDD /* Home.storyboard */,
 				E1BC24462B06C3FC0038CFDD /* HomeViewController.swift */,
+				E186B72D2B0787E20069B4FD /* Table Cells */,
+				E186B7322B078ADD0069B4FD /* Collection Cells */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -233,9 +261,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				E1BC24452B06C3E80038CFDD /* Home.storyboard in Resources */,
+				E186B72C2B0787DF0069B4FD /* OTTContentTableViewCell.xib in Resources */,
 				E1BC244C2B06C6AA0038CFDD /* Color.xcassets in Resources */,
 				E1BC243D2B06C3260038CFDD /* LaunchScreen.storyboard in Resources */,
 				E1BC243A2B06C3260038CFDD /* Assets.xcassets in Resources */,
+				E186B7312B078ADA0069B4FD /* MovieContentCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,7 +288,9 @@
 				E1BC24542B06CA5D0038CFDD /* NetworkLayer.swift in Sources */,
 				E1BC245C2B06CAE50038CFDD /* HomeModel.swift in Sources */,
 				E1BC24472B06C3FC0038CFDD /* HomeViewController.swift in Sources */,
+				E186B7302B078ADA0069B4FD /* MovieContentCollectionViewCell.swift in Sources */,
 				E1BC24632B06CF130038CFDD /* ConfigManager.swift in Sources */,
+				E186B72B2B0787DF0069B4FD /* OTTContentTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

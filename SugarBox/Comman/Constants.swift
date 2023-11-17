@@ -11,8 +11,8 @@ struct Constants {
     //Home Landing
     struct Home {
         static let Title = "SugarBox"
-        static let WallyTableViewCell = "WallyTableViewCell"
-        static let WallyCollectionViewCell = "WallyCollectionViewCell"
+        static let OTTContentTableViewCell = "OTTContentTableViewCell"
+        static let MovieContentCollectionViewCell = "MovieContentCollectionViewCell"
         static let CustomHeaderTableViewCell = "CustomHeaderTableViewCell"
     }
     

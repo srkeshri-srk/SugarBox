@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MovieContentCollectionViewCell" id="gTV-IL-0wX" customClass="MovieContentCollectionViewCell" customModule="SugarBox" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="257" height="131"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="257" height="131"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jg1-8V-9EV">
+                        <rect key="frame" x="0.0" y="0.0" width="257" height="131"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Poster" translatesAutoresizingMaskIntoConstraints="NO" id="10J-gC-D5h">
+                                <rect key="frame" x="5" y="0.0" width="247" height="131"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="10J-gC-D5h" secondAttribute="bottom" id="OiN-aY-F0G"/>
+                            <constraint firstItem="10J-gC-D5h" firstAttribute="leading" secondItem="Jg1-8V-9EV" secondAttribute="leading" constant="5" id="Vcg-CH-jWq"/>
+                            <constraint firstAttribute="trailing" secondItem="10J-gC-D5h" secondAttribute="trailing" constant="5" id="iQk-lN-ieX"/>
+                            <constraint firstItem="10J-gC-D5h" firstAttribute="top" secondItem="Jg1-8V-9EV" secondAttribute="top" id="vcF-Sw-uee"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="Jg1-8V-9EV" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="REb-e5-e6k"/>
+                <constraint firstItem="Jg1-8V-9EV" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="hQv-KT-iTj"/>
+                <constraint firstAttribute="trailing" secondItem="Jg1-8V-9EV" secondAttribute="trailing" id="qlY-kD-8WR"/>
+                <constraint firstAttribute="bottom" secondItem="Jg1-8V-9EV" secondAttribute="bottom" id="woY-fF-Fe2"/>
+            </constraints>
+            <size key="customSize" width="257" height="131"/>
+            <point key="canvasLocation" x="238.93129770992365" y="48.239436619718312"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="Poster" width="380" height="216.66667175292969"/>
+    </resources>
+</document>
