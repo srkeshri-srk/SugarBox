@@ -94,6 +94,16 @@
 			path = "Collection Cells";
 			sourceTree = "<group>";
 		};
+		E19722772B07F16D005429E9 /* Home Section */ = {
+			isa = PBXGroup;
+			children = (
+				E1BC245F2B06CAF60038CFDD /* Model */,
+				E1BC245A2B06CAD70038CFDD /* Views */,
+				E1BC24602B06CAFA0038CFDD /* ViewModel */,
+			);
+			path = "Home Section";
+			sourceTree = "<group>";
+		};
 		E1BC24242B06C3230038CFDD = {
 			isa = PBXGroup;
 			children = (
@@ -127,9 +137,7 @@
 		E1BC24482B06C5B60038CFDD /* Module */ = {
 			isa = PBXGroup;
 			children = (
-				E1BC245F2B06CAF60038CFDD /* Model */,
-				E1BC245A2B06CAD70038CFDD /* Views */,
-				E1BC24602B06CAFA0038CFDD /* ViewModel */,
+				E19722772B07F16D005429E9 /* Home Section */,
 			);
 			path = Module;
 			sourceTree = "<group>";
