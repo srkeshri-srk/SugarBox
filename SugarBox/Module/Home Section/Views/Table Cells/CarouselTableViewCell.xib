@@ -45,7 +45,7 @@
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
                 <outlet property="colletionView" destination="Sae-J3-GaQ" id="tpd-tN-qZA"/>
-                <outlet property="pageContol" destination="Dhz-ac-68k" id="uKD-hq-OtF"/>
+                <outlet property="pageControl" destination="Dhz-ac-68k" id="uKD-hq-OtF"/>
             </connections>
             <point key="canvasLocation" x="39.694656488549619" y="19.718309859154932"/>
         </tableViewCell>

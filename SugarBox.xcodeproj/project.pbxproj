@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		E1157FD42B07FE9900AB81F3 /* CarouselTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1157FD22B07FE9900AB81F3 /* CarouselTableViewCell.swift */; };
 		E1157FD52B07FE9900AB81F3 /* CarouselTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1157FD32B07FE9900AB81F3 /* CarouselTableViewCell.xib */; };
+		E1157FDB2B080CB400AB81F3 /* CarouselTVCell+CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1157FDA2B080CB400AB81F3 /* CarouselTVCell+CollectionView.swift */; };
 		E186B72B2B0787DF0069B4FD /* OTTContentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E186B7292B0787DF0069B4FD /* OTTContentTableViewCell.swift */; };
 		E186B72C2B0787DF0069B4FD /* OTTContentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E186B72A2B0787DF0069B4FD /* OTTContentTableViewCell.xib */; };
 		E186B7302B078ADA0069B4FD /* MovieContentCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E186B72E2B078ADA0069B4FD /* MovieContentCollectionViewCell.swift */; };
@@ -38,6 +39,7 @@
 /* Begin PBXFileReference section */
 		E1157FD22B07FE9900AB81F3 /* CarouselTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselTableViewCell.swift; sourceTree = "<group>"; };
 		E1157FD32B07FE9900AB81F3 /* CarouselTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CarouselTableViewCell.xib; sourceTree = "<group>"; };
+		E1157FDA2B080CB400AB81F3 /* CarouselTVCell+CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CarouselTVCell+CollectionView.swift"; sourceTree = "<group>"; };
 		E186B7292B0787DF0069B4FD /* OTTContentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTTContentTableViewCell.swift; sourceTree = "<group>"; };
 		E186B72A2B0787DF0069B4FD /* OTTContentTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OTTContentTableViewCell.xib; sourceTree = "<group>"; };
 		E186B72E2B078ADA0069B4FD /* MovieContentCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieContentCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -83,6 +85,7 @@
 			children = (
 				E1157FD32B07FE9900AB81F3 /* CarouselTableViewCell.xib */,
 				E1157FD22B07FE9900AB81F3 /* CarouselTableViewCell.swift */,
+				E1157FDA2B080CB400AB81F3 /* CarouselTVCell+CollectionView.swift */,
 				E186B72A2B0787DF0069B4FD /* OTTContentTableViewCell.xib */,
 				E186B7292B0787DF0069B4FD /* OTTContentTableViewCell.swift */,
 				E19722752B07F118005429E9 /* OTTContentTVCell+CollectionView.swift */,
@@ -308,6 +311,7 @@
 				E1157FD42B07FE9900AB81F3 /* CarouselTableViewCell.swift in Sources */,
 				E1BC24582B06CA5D0038CFDD /* JSONParser.swift in Sources */,
 				E1BC24562B06CA5D0038CFDD /* APIRequest.swift in Sources */,
+				E1157FDB2B080CB400AB81F3 /* CarouselTVCell+CollectionView.swift in Sources */,
 				E1BC24552B06CA5D0038CFDD /* URLGenerator.swift in Sources */,
 				E19722762B07F118005429E9 /* OTTContentTVCell+CollectionView.swift in Sources */,
 				E1BC24532B06CA5D0038CFDD /* NetworkLayer+DataTask.swift in Sources */,

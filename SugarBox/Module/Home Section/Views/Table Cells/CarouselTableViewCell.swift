@@ -10,7 +10,13 @@ import UIKit
 class CarouselTableViewCell: UITableViewCell {
     
     @IBOutlet weak var colletionView: UICollectionView!
-    @IBOutlet weak var pageContol: UIPageControl!
+    @IBOutlet weak var pageControl: UIPageControl!
+    
+    var currentPage = 0 {
+        didSet {
+            pageControl.currentPage = currentPage
+        }
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -25,8 +31,8 @@ class CarouselTableViewCell: UITableViewCell {
     }
     
     private func setupPageContol() {
-        pageContol.numberOfPages = 5
-        pageContol.currentPage = .zero
+        pageControl.numberOfPages = 5
+        pageControl.currentPage = .zero
     }
 
     
@@ -34,28 +40,5 @@ class CarouselTableViewCell: UITableViewCell {
         colletionView.delegate = self
         colletionView.dataSource = self
         colletionView.register(UINib(nibName: Constants.Home.movieContentCollectionViewCell, bundle: nil), forCellWithReuseIdentifier: Constants.Home.movieContentCollectionViewCell)
-    }
-}
-
-extension CarouselTableViewCell: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell: MovieContentCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: Constants.Home.movieContentCollectionViewCell, for: indexPath) as! MovieContentCollectionViewCell
-        return cell
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: UIScreen.main.bounds.width * 0.85, height: 200)
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top: 0, left: 15, bottom: 0, right: 0)
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
-        pageContol.currentPage = indexPath.row
     }
 }
