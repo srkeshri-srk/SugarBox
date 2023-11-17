@@ -12,6 +12,8 @@
 		E186B7302B078ADA0069B4FD /* MovieContentCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E186B72E2B078ADA0069B4FD /* MovieContentCollectionViewCell.swift */; };
 		E186B7312B078ADA0069B4FD /* MovieContentCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E186B72F2B078ADA0069B4FD /* MovieContentCollectionViewCell.xib */; };
 		E19722722B07D55F005429E9 /* CustomHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19722712B07D55F005429E9 /* CustomHeaderTableViewCell.swift */; };
+		E19722742B07F0A1005429E9 /* HomeViewController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19722732B07F0A1005429E9 /* HomeViewController+TableView.swift */; };
+		E19722762B07F118005429E9 /* OTTContentTVCell+CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19722752B07F118005429E9 /* OTTContentTVCell+CollectionView.swift */; };
 		E1BC24312B06C3230038CFDD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BC24302B06C3230038CFDD /* AppDelegate.swift */; };
 		E1BC24332B06C3230038CFDD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BC24322B06C3230038CFDD /* SceneDelegate.swift */; };
 		E1BC243A2B06C3260038CFDD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1BC24392B06C3260038CFDD /* Assets.xcassets */; };
@@ -37,6 +39,8 @@
 		E186B72E2B078ADA0069B4FD /* MovieContentCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieContentCollectionViewCell.swift; sourceTree = "<group>"; };
 		E186B72F2B078ADA0069B4FD /* MovieContentCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieContentCollectionViewCell.xib; sourceTree = "<group>"; };
 		E19722712B07D55F005429E9 /* CustomHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomHeaderTableViewCell.swift; sourceTree = "<group>"; };
+		E19722732B07F0A1005429E9 /* HomeViewController+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeViewController+TableView.swift"; sourceTree = "<group>"; };
+		E19722752B07F118005429E9 /* OTTContentTVCell+CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OTTContentTVCell+CollectionView.swift"; sourceTree = "<group>"; };
 		E1BC242D2B06C3230038CFDD /* SugarBox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SugarBox.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1BC24302B06C3230038CFDD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E1BC24322B06C3230038CFDD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -73,8 +77,9 @@
 		E186B72D2B0787E20069B4FD /* Table Cells */ = {
 			isa = PBXGroup;
 			children = (
-				E186B7292B0787DF0069B4FD /* OTTContentTableViewCell.swift */,
 				E186B72A2B0787DF0069B4FD /* OTTContentTableViewCell.xib */,
+				E186B7292B0787DF0069B4FD /* OTTContentTableViewCell.swift */,
+				E19722752B07F118005429E9 /* OTTContentTVCell+CollectionView.swift */,
 				E19722712B07D55F005429E9 /* CustomHeaderTableViewCell.swift */,
 			);
 			path = "Table Cells";
@@ -166,6 +171,7 @@
 			children = (
 				E1BC24442B06C3E80038CFDD /* Home.storyboard */,
 				E1BC24462B06C3FC0038CFDD /* HomeViewController.swift */,
+				E19722732B07F0A1005429E9 /* HomeViewController+TableView.swift */,
 				E186B72D2B0787E20069B4FD /* Table Cells */,
 				E186B7322B078ADD0069B4FD /* Collection Cells */,
 			);
@@ -282,10 +288,12 @@
 				E1BC24312B06C3230038CFDD /* AppDelegate.swift in Sources */,
 				E19722722B07D55F005429E9 /* CustomHeaderTableViewCell.swift in Sources */,
 				E1BC245E2B06CAF00038CFDD /* HomeViewModel.swift in Sources */,
+				E19722742B07F0A1005429E9 /* HomeViewController+TableView.swift in Sources */,
 				E1BC24572B06CA5D0038CFDD /* NetworkError.swift in Sources */,
 				E1BC24582B06CA5D0038CFDD /* JSONParser.swift in Sources */,
 				E1BC24562B06CA5D0038CFDD /* APIRequest.swift in Sources */,
 				E1BC24552B06CA5D0038CFDD /* URLGenerator.swift in Sources */,
+				E19722762B07F118005429E9 /* OTTContentTVCell+CollectionView.swift in Sources */,
 				E1BC24532B06CA5D0038CFDD /* NetworkLayer+DataTask.swift in Sources */,
 				E1BC24662B06CF940038CFDD /* Constants.swift in Sources */,
 				E1BC24332B06C3230038CFDD /* SceneDelegate.swift in Sources */,

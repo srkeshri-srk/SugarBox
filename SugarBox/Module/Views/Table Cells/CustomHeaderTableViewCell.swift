@@ -13,6 +13,7 @@ class CustomHeaderTableViewCell: UITableViewHeaderFooterView {
         label.textColor = .white
         label.font = UIFont.systemFont(ofSize: 22.0)
         label.textAlignment = .left
+        label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
     
@@ -21,6 +22,7 @@ class CustomHeaderTableViewCell: UITableViewHeaderFooterView {
         view.backgroundColor = .blueIII
         view.layer.cornerRadius = view.bounds.size.width / 2
         view.layer.masksToBounds = true
+        view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
     
@@ -36,9 +38,6 @@ class CustomHeaderTableViewCell: UITableViewHeaderFooterView {
     }
     
     private func setupUI() {
-        title.translatesAutoresizingMaskIntoConstraints = false
-        sepratorView.translatesAutoresizingMaskIntoConstraints = false
-        
         contentView.addSubview(title)
         contentView.addSubview(sepratorView)
         
