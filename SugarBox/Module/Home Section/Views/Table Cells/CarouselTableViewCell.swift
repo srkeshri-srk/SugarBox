@@ -36,10 +36,12 @@ class CarouselTableViewCell: UITableViewCell {
         setupUI()
         setupPageContol()
         setupCollectionView()
+        addNotifications()
     }
     
     private func setupUI() {
         self.contentView.backgroundColor = .clear
+        UIDevice.current.beginGeneratingDeviceOrientationNotifications()
     }
     
     private func setupPageContol() {
@@ -51,6 +53,10 @@ class CarouselTableViewCell: UITableViewCell {
         colletionView.delegate = self
         colletionView.dataSource = self
         colletionView.register(UINib(nibName: Constants.Home.movieContentCollectionViewCell, bundle: nil), forCellWithReuseIdentifier: Constants.Home.movieContentCollectionViewCell)
+    }
+    
+    private func addNotifications() {
+        NotificationCenter.default.addObserver(self, selector: #selector(self.onOrientationChange(notification:)), name: UIDevice.orientationDidChangeNotification, object: nil)
     }
     
     func configureData(info: [Content]?) {
@@ -70,6 +76,11 @@ class CarouselTableViewCell: UITableViewCell {
                 }
             }
         }
+    }
+    
+    @objc func onOrientationChange(notification: Notification) {
+        print("onOrientationChange")
+        colletionView.reloadData()
     }
     
 }

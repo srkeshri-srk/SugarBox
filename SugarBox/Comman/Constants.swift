@@ -5,9 +5,19 @@
 //  Created by Shreyansh Raj  Keshri on 17/11/23.
 //
 
-import Foundation
+import UIKit
 
 struct Constants {
+    
+    static let orientation = UIDevice.current.orientation
+    
+    struct Size {
+        static var screenWidth = UIScreen.main.bounds.width
+        static var screenHeight = UIScreen.main.bounds.height
+        static let carouselCell = orientation.isLandscape ? screenWidth * 0.50 : screenWidth * 0.85
+        static let ottContentCell = orientation.isLandscape ? (screenWidth - 10) * 0.18 : (screenWidth - 10) * 0.4
+    }
+    
     //Home Section
     struct Home {
         static let title = "Home"

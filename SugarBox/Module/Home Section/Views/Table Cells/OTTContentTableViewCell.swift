@@ -31,6 +31,7 @@ class OTTContentTableViewCell: UITableViewCell {
     
     private func setupUI() {
         self.contentView.backgroundColor = .clear
+        UIDevice.current.beginGeneratingDeviceOrientationNotifications()
     }
     
     private func setupCollectionView() {
@@ -38,6 +39,10 @@ class OTTContentTableViewCell: UITableViewCell {
         collectionview.dataSource = self
         collectionview.backgroundColor = .clear
         collectionview.register(UINib(nibName: Constants.Home.movieContentCollectionViewCell, bundle: nil), forCellWithReuseIdentifier: Constants.Home.movieContentCollectionViewCell)
+    }
+    
+    private func addNotifications() {
+        NotificationCenter.default.addObserver(self, selector: #selector(self.onOrientationChange(notification:)), name: UIDevice.orientationDidChangeNotification, object: nil)
     }
     
     func configureData(info: [Content]?) {
@@ -57,5 +62,10 @@ class OTTContentTableViewCell: UITableViewCell {
                 }
             }
         }
+    }
+    
+    @objc func onOrientationChange(notification: Notification) {
+        print("onOrientationChange")
+        collectionview.reloadData()
     }
 }
