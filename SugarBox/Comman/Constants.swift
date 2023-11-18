@@ -20,5 +20,6 @@ struct Constants {
     //Network Layer
     struct NetworkLayer {
         static let homeDetailsURL = "https://" + ConfigManager.baseURL + "/ecm/" + ConfigManager.version + "/super/feeds/zee5-home/details"
+        static let imageBaseURL = "https://" + ConfigManager.imageBaseURL
     }
 }

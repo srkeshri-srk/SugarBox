@@ -12,6 +12,18 @@ class CarouselTableViewCell: UITableViewCell {
     @IBOutlet weak var colletionView: UICollectionView!
     @IBOutlet weak var pageControl: UIPageControl!
     
+    var assets = [Asset]() {
+        didSet {
+            colletionView.reloadData()
+            pageControl.numberOfPages = assets.count
+        }
+    }
+    var contents: [Content]? {
+        didSet {
+            getAssets()
+        }
+    }
+    
     var currentPage = 0 {
         didSet {
             pageControl.currentPage = currentPage
@@ -31,7 +43,6 @@ class CarouselTableViewCell: UITableViewCell {
     }
     
     private func setupPageContol() {
-        pageControl.numberOfPages = 5
         pageControl.currentPage = .zero
     }
 
@@ -41,4 +52,23 @@ class CarouselTableViewCell: UITableViewCell {
         colletionView.dataSource = self
         colletionView.register(UINib(nibName: Constants.Home.movieContentCollectionViewCell, bundle: nil), forCellWithReuseIdentifier: Constants.Home.movieContentCollectionViewCell)
     }
+    
+    func configureData(info: [Content]?) {
+        contents = info
+    }
+    
+    func getAssets() {
+        guard let contents = contents else { return }
+            
+        for content in contents {
+            if let assets = content.assets {
+                for asset in assets {
+                    if asset.assetType == .image && asset.type == .thumbnailList {
+                        self.assets.append(asset)
+                    }
+                }
+            }
+        }
+    }
+    
 }

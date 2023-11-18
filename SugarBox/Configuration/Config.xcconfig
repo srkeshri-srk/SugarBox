@@ -10,5 +10,5 @@
 
 
 BASE_URL = apigw.sboxdc.com
-IMAGE_BASE_URL = static01.sboxdc.com/images/
+IMAGE_BASE_URL = static01.sboxdc.com/images
 VERSION = v2

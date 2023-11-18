@@ -13,7 +13,7 @@ protocol HomeProtocol: AnyObject {
     var paginationLimit: Int { get }
     
     func fetchDataFromAPI(currentPage: Int, completion: @escaping ()->Void)
-    func getInfo(index: Int)
+    func getContentsInfo(index: Int) -> [Content]?
     func getDesignType(index: Int) -> DesignSlug
     func getSectionTitle(index: Int) -> String
 }
@@ -59,8 +59,9 @@ class HomeViewModel: HomeProtocol {
         self.homeData = model.data
     }
     
-    func getInfo(index: Int) {
-        
+    func getContentsInfo(index: Int) -> [Content]? {
+        guard let homeData = self.homeData?[index] else { return nil }
+        return homeData.contents
     }
     
     func getDesignType(index: Int) -> DesignSlug {

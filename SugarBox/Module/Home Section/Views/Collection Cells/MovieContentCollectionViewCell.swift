@@ -22,8 +22,9 @@ class MovieContentCollectionViewCell: UICollectionViewCell {
         artworkImageView.layer.masksToBounds = true
     }
     
-    func setArtwork(value: String) {
-        artworkImageView.image = UIImage(named: value)
+    func configureUI(value: String?) {
+        guard let value = value, let url = URL(string: Constants.NetworkLayer.imageBaseURL + value) else { return }
+        print(url)
     }
 
 }

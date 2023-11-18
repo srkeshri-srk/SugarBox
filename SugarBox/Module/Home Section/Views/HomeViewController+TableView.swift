@@ -16,6 +16,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         switch homeVM.getDesignType(index: indexPath.section) {
         case .carousal:
             let cell: CarouselTableViewCell = tableView.dequeueReusableCell(withIdentifier: Constants.Home.carouselTableViewCell, for: indexPath) as! CarouselTableViewCell
+            cell.configureData(info: homeVM.getContentsInfo(index: indexPath.section))
             return cell
         case .ottContent:
             let cell: OTTContentTableViewCell = tableView.dequeueReusableCell(withIdentifier: Constants.Home.ottContentTableViewCell, for: indexPath) as! OTTContentTableViewCell
