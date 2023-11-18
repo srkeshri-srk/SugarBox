@@ -53,6 +53,7 @@ class CustomHeaderTableViewCell: UITableViewHeaderFooterView {
     }
     
     func setTitle(value: String) {
-        self.title.text = value
+        guard let title = value.components(separatedBy: "-").first else { return }
+        self.title.text = title
     }
 }
