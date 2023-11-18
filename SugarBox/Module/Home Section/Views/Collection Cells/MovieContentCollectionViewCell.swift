@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class MovieContentCollectionViewCell: UICollectionViewCell {
 
@@ -24,7 +25,10 @@ class MovieContentCollectionViewCell: UICollectionViewCell {
     
     func configureUI(value: String?) {
         guard let value = value, let url = URL(string: Constants.NetworkLayer.imageBaseURL + value) else { return }
-        print(url)
+        
+        let processor = DownsamplingImageProcessor(size: artworkImageView.bounds.size)
+        artworkImageView.kf.indicatorType = .activity
+        artworkImageView.kf.setImage(with: url, placeholder: UIImage(named: "SugarboxPlaceHolder"), options: [.processor(processor), .scaleFactor(UIScreen.main.scale), .transition(.fade(1)), .cacheOriginalImage])
     }
 
 }

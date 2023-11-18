@@ -10,6 +10,7 @@
 		E1157FD42B07FE9900AB81F3 /* CarouselTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1157FD22B07FE9900AB81F3 /* CarouselTableViewCell.swift */; };
 		E1157FD52B07FE9900AB81F3 /* CarouselTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1157FD32B07FE9900AB81F3 /* CarouselTableViewCell.xib */; };
 		E1157FDB2B080CB400AB81F3 /* CarouselTVCell+CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1157FDA2B080CB400AB81F3 /* CarouselTVCell+CollectionView.swift */; };
+		E14CFD5F2B08E79D002DE2F5 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = E14CFD5E2B08E79D002DE2F5 /* Kingfisher */; };
 		E186B72B2B0787DF0069B4FD /* OTTContentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E186B7292B0787DF0069B4FD /* OTTContentTableViewCell.swift */; };
 		E186B72C2B0787DF0069B4FD /* OTTContentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E186B72A2B0787DF0069B4FD /* OTTContentTableViewCell.xib */; };
 		E186B7302B078ADA0069B4FD /* MovieContentCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E186B72E2B078ADA0069B4FD /* MovieContentCollectionViewCell.swift */; };
@@ -74,6 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E14CFD5F2B08E79D002DE2F5 /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -244,6 +246,9 @@
 			dependencies = (
 			);
 			name = SugarBox;
+			packageProductDependencies = (
+				E14CFD5E2B08E79D002DE2F5 /* Kingfisher */,
+			);
 			productName = SugarBox;
 			productReference = E1BC242D2B06C3230038CFDD /* SugarBox.app */;
 			productType = "com.apple.product-type.application";
@@ -272,6 +277,9 @@
 				Base,
 			);
 			mainGroup = E1BC24242B06C3230038CFDD;
+			packageReferences = (
+				E14CFD5D2B08E79D002DE2F5 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = E1BC242E2B06C3230038CFDD /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -539,6 +547,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E14CFD5D2B08E79D002DE2F5 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.10.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E14CFD5E2B08E79D002DE2F5 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E14CFD5D2B08E79D002DE2F5 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E1BC24252B06C3230038CFDD /* Project object */;
 }
