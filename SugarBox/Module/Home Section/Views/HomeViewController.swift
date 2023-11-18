@@ -11,26 +11,22 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var tableview: UITableView!
     
     let homeVM: HomeProtocol = HomeViewModel()
+    var currentPage: Int = 1
     let spinner: UIActivityIndicatorView = {
         let spinner = UIActivityIndicatorView(style: .large)
         spinner.hidesWhenStopped = true
         return spinner
     }()
     
-    private var currentPage: Int = 1 {
-        didSet {
-            print(currentPage)
-            fetchData()
-        }
-    }
-
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupUI()
         setupTabelView()
-        fetchData()
+        fetchData {
+            self.tableview.reloadData()
+        }
     }
     
     private func setupUI() {
@@ -49,20 +45,25 @@ class HomeViewController: UIViewController {
         tableview.register(CustomHeaderTableViewCell.self, forHeaderFooterViewReuseIdentifier: Constants.Home.customHeaderTableViewCell)
     }
     
-    func fetchData() {
+    func fetchData(completion: @escaping ()->Void) {
         DispatchQueue.global(qos: .background).async {
             self.homeVM.fetchDataFromAPI(currentPage: self.currentPage) { 
                 DispatchQueue.main.async {
-                    self.spinner.stopAnimating()
-                    self.tableview.reloadData()
+                    completion()
                 }
             }
         }
     }
     
     func doPagination() {
-//        if currentPage < homeVM.paginationLimit {
-//            self.currentPage += 1
-//        }
+        if currentPage < homeVM.paginationLimit {
+            self.currentPage += 1
+            fetchData {
+                self.spinner.stopAnimating()
+                self.tableview.reloadData()
+            }
+        } else {
+            self.spinner.stopAnimating()
+        }
     }
 }

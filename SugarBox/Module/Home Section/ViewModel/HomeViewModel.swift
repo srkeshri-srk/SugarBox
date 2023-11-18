@@ -21,9 +21,9 @@ protocol HomeProtocol: AnyObject {
 
 class HomeViewModel: HomeProtocol {
     private let networkLayerServices = NetworkLayerServices()
-    private var homeData: [DataModel]?
-    private let perPage: Int = 10
-    let paginationLimit: Int = 3
+    private var homeData: [DataModel]? = [DataModel]()
+    private let perPage: Int = 5
+    var paginationLimit: Int = 2
     
     var sectionCount: Int {
         return homeData?.count ?? 0
@@ -46,7 +46,7 @@ class HomeViewModel: HomeProtocol {
             switch result {
             case .success(let success):
                 self.configureData(model: success)
-                print("Successfull!! 🎉")
+                self.paginationLimit = success.pagination?.totalPages ?? 2
                 completion()
             case .failure(let failure):
                 print(failure)
@@ -56,7 +56,8 @@ class HomeViewModel: HomeProtocol {
     }
     
     private func configureData(model: HomeModel) {
-        self.homeData = model.data
+        guard let data = model.data else { return }
+        self.homeData?.append(contentsOf: data)
     }
     
     func getContentsInfo(index: Int) -> [Content]? {
