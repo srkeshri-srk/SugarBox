@@ -22,7 +22,8 @@ struct DataModel: Codable {
     let datumID, addedOn: String?
     let designID: DesignID?
     let designMeta: DesignMeta?
-    let designSlug, widgetType: String?
+    let designSlug: DesignSlug?
+    let widgetType: String?
 
     enum CodingKeys: String, CodingKey {
         case id = "_id"
@@ -33,6 +34,11 @@ struct DataModel: Codable {
         case designID = "designId"
         case designMeta, designSlug, widgetType
     }
+}
+
+enum DesignSlug: String, Codable {
+    case carousal = "CarousalWidget"
+    case ottContent = "OTTWidget"
 }
 
 // MARK: - Content

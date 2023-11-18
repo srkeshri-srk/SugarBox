@@ -13,33 +13,36 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if indexPath.section == 0 {
+        switch homeVM.getDesignType(index: indexPath.section) {
+        case .carousal:
             let cell: CarouselTableViewCell = tableView.dequeueReusableCell(withIdentifier: Constants.Home.carouselTableViewCell, for: indexPath) as! CarouselTableViewCell
             return cell
-        } else {
+        case .ottContent:
             let cell: OTTContentTableViewCell = tableView.dequeueReusableCell(withIdentifier: Constants.Home.ottContentTableViewCell, for: indexPath) as! OTTContentTableViewCell
             return cell
         }
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if indexPath.section == 0 {
+        switch homeVM.getDesignType(index: indexPath.section) {
+        case .carousal:
             return 250.0
-        } else {
+        case .ottContent:
             return 100.0
         }
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 10
+        return homeVM.sectionCount
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        if section == 0 {
+        switch homeVM.getDesignType(index: section) {
+        case .carousal:
             return nil
-        } else {
+        case .ottContent:
             let view = tableView.dequeueReusableHeaderFooterView(withIdentifier: Constants.Home.customHeaderTableViewCell) as! CustomHeaderTableViewCell
-            view.setTitle(value: "Movie Section \(section + 1)")
+            view.setTitle(value: homeVM.getSectionTitle(index: section))
             return view
         }
     }

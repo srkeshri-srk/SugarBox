@@ -9,17 +9,26 @@ import Foundation
 
 
 protocol HomeProtocol: AnyObject {
+    var sectionCount: Int { get }
     var paginationLimit: Int { get }
+    
     func fetchDataFromAPI(currentPage: Int, completion: @escaping ()->Void)
     func getInfo(index: Int)
+    func getDesignType(index: Int) -> DesignSlug
+    func getSectionTitle(index: Int) -> String
 }
 
 
 class HomeViewModel: HomeProtocol {
     private let networkLayerServices = NetworkLayerServices()
-    private var homeModel: HomeModel?
+    private var homeData: [DataModel]?
     private let perPage: Int = 10
     let paginationLimit: Int = 3
+    
+    var sectionCount: Int {
+        return homeData?.count ?? 0
+    }
+    
     
     func fetchDataFromAPI(currentPage: Int, completion: @escaping ()->Void) {
         guard let url = URL(string: Constants.NetworkLayer.homeDetailsURL) else {
@@ -36,7 +45,7 @@ class HomeViewModel: HomeProtocol {
         networkLayerServices.dataTask(apiRequest) { (result: Result<HomeModel, NetworkError>) in
             switch result {
             case .success(let success):
-                self.configureData(data: success)
+                self.configureData(model: success)
                 print("Successfull!! 🎉")
                 completion()
             case .failure(let failure):
@@ -46,11 +55,22 @@ class HomeViewModel: HomeProtocol {
         }
     }
     
-    private func configureData(data: HomeModel) {
-        self.homeModel = data
+    private func configureData(model: HomeModel) {
+        self.homeData = model.data
     }
     
     func getInfo(index: Int) {
         
     }
+    
+    func getDesignType(index: Int) -> DesignSlug {
+        guard let homeData = self.homeData?[index], let design = homeData.designSlug else { return .ottContent }
+        return design
+    }
+    
+    func getSectionTitle(index: Int) -> String {
+        guard let homeData = self.homeData?[index], let title = homeData.title else { return "" }
+        return title
+    }
+
 }

@@ -50,18 +50,19 @@ class HomeViewController: UIViewController {
     }
     
     func fetchData() {
-        homeVM.fetchDataFromAPI(currentPage: currentPage) {
-            DispatchQueue.main.async {
-                self.spinner.stopAnimating()
-//                self.tableview.reloadData()
-                print("Heyy!!")
+        DispatchQueue.global(qos: .background).async {
+            self.homeVM.fetchDataFromAPI(currentPage: self.currentPage) { 
+                DispatchQueue.main.async {
+                    self.spinner.stopAnimating()
+                    self.tableview.reloadData()
+                }
             }
         }
     }
     
     func doPagination() {
-        if currentPage < homeVM.paginationLimit {
-            self.currentPage += 1
-        }
+//        if currentPage < homeVM.paginationLimit {
+//            self.currentPage += 1
+//        }
     }
 }

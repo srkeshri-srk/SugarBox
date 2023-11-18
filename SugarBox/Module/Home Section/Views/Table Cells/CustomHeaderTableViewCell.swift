@@ -11,7 +11,7 @@ class CustomHeaderTableViewCell: UITableViewHeaderFooterView {
     private let title: UILabel = {
         let label = UILabel()
         label.textColor = .white
-        label.font = UIFont.systemFont(ofSize: 22.0)
+        label.font = UIFont.systemFont(ofSize: 18.0)
         label.textAlignment = .left
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
