@@ -20,6 +20,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
             return cell
         case .ottContent:
             let cell: OTTContentTableViewCell = tableView.dequeueReusableCell(withIdentifier: Constants.Home.ottContentTableViewCell, for: indexPath) as! OTTContentTableViewCell
+            cell.configureData(info: homeVM.getContentsInfo(index: indexPath.section))
             return cell
         }
     }

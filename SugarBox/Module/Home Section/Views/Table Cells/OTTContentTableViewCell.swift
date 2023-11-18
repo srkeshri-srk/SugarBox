@@ -11,6 +11,17 @@ class OTTContentTableViewCell: UITableViewCell {
 
     @IBOutlet weak var collectionview: UICollectionView!
     
+    var assets = [Asset]() {
+        didSet {
+            collectionview.reloadData()
+        }
+    }
+    var contents: [Content]? {
+        didSet {
+            getAssets()
+        }
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -27,5 +38,23 @@ class OTTContentTableViewCell: UITableViewCell {
         collectionview.dataSource = self
         collectionview.backgroundColor = .clear
         collectionview.register(UINib(nibName: Constants.Home.movieContentCollectionViewCell, bundle: nil), forCellWithReuseIdentifier: Constants.Home.movieContentCollectionViewCell)
+    }
+    
+    func configureData(info: [Content]?) {
+        contents = info
+    }
+    
+    func getAssets() {
+        guard let contents = contents else { return }
+            
+        for content in contents {
+            if let assets = content.assets {
+                for asset in assets {
+                    if asset.assetType == .image && asset.type == .thumbnailList {
+                        self.assets.append(asset)
+                    }
+                }
+            }
+        }
     }
 }
