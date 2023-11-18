@@ -10,6 +10,12 @@
 		E1157FD42B07FE9900AB81F3 /* CarouselTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1157FD22B07FE9900AB81F3 /* CarouselTableViewCell.swift */; };
 		E1157FD52B07FE9900AB81F3 /* CarouselTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1157FD32B07FE9900AB81F3 /* CarouselTableViewCell.xib */; };
 		E1157FDB2B080CB400AB81F3 /* CarouselTVCell+CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1157FDA2B080CB400AB81F3 /* CarouselTVCell+CollectionView.swift */; };
+		E14BBEB42B08F3220099529B /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E14BBEB32B08F3220099529B /* MainTabBarController.swift */; };
+		E14BBEB62B08F3830099529B /* MainTabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E14BBEB52B08F3830099529B /* MainTabBar.storyboard */; };
+		E14BBEB92B0936DF0099529B /* MovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E14BBEB82B0936DF0099529B /* MovieViewController.swift */; };
+		E14BBEBB2B0936EC0099529B /* Movie.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E14BBEBA2B0936EC0099529B /* Movie.storyboard */; };
+		E14BBEBE2B0937CD0099529B /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E14BBEBD2B0937CD0099529B /* Profile.storyboard */; };
+		E14BBEC02B0937DC0099529B /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E14BBEBF2B0937DC0099529B /* ProfileViewController.swift */; };
 		E14CFD5F2B08E79D002DE2F5 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = E14CFD5E2B08E79D002DE2F5 /* Kingfisher */; };
 		E186B72B2B0787DF0069B4FD /* OTTContentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E186B7292B0787DF0069B4FD /* OTTContentTableViewCell.swift */; };
 		E186B72C2B0787DF0069B4FD /* OTTContentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E186B72A2B0787DF0069B4FD /* OTTContentTableViewCell.xib */; };
@@ -41,6 +47,12 @@
 		E1157FD22B07FE9900AB81F3 /* CarouselTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselTableViewCell.swift; sourceTree = "<group>"; };
 		E1157FD32B07FE9900AB81F3 /* CarouselTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CarouselTableViewCell.xib; sourceTree = "<group>"; };
 		E1157FDA2B080CB400AB81F3 /* CarouselTVCell+CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CarouselTVCell+CollectionView.swift"; sourceTree = "<group>"; };
+		E14BBEB32B08F3220099529B /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		E14BBEB52B08F3830099529B /* MainTabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainTabBar.storyboard; sourceTree = "<group>"; };
+		E14BBEB82B0936DF0099529B /* MovieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieViewController.swift; sourceTree = "<group>"; };
+		E14BBEBA2B0936EC0099529B /* Movie.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Movie.storyboard; sourceTree = "<group>"; };
+		E14BBEBD2B0937CD0099529B /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
+		E14BBEBF2B0937DC0099529B /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		E186B7292B0787DF0069B4FD /* OTTContentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTTContentTableViewCell.swift; sourceTree = "<group>"; };
 		E186B72A2B0787DF0069B4FD /* OTTContentTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OTTContentTableViewCell.xib; sourceTree = "<group>"; };
 		E186B72E2B078ADA0069B4FD /* MovieContentCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieContentCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -82,6 +94,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E14BBEB72B08F4850099529B /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				E14BBEB52B08F3830099529B /* MainTabBar.storyboard */,
+				E14BBEB32B08F3220099529B /* MainTabBarController.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		E14BBEBC2B0937130099529B /* Movie Section */ = {
+			isa = PBXGroup;
+			children = (
+				E14BBEBA2B0936EC0099529B /* Movie.storyboard */,
+				E14BBEB82B0936DF0099529B /* MovieViewController.swift */,
+			);
+			path = "Movie Section";
+			sourceTree = "<group>";
+		};
+		E14BBEC12B0937E40099529B /* Profile Section */ = {
+			isa = PBXGroup;
+			children = (
+				E14BBEBD2B0937CD0099529B /* Profile.storyboard */,
+				E14BBEBF2B0937DC0099529B /* ProfileViewController.swift */,
+			);
+			path = "Profile Section";
+			sourceTree = "<group>";
+		};
 		E186B72D2B0787E20069B4FD /* Table Cells */ = {
 			isa = PBXGroup;
 			children = (
@@ -148,7 +187,10 @@
 		E1BC24482B06C5B60038CFDD /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				E14BBEB72B08F4850099529B /* TabBar */,
 				E19722772B07F16D005429E9 /* Home Section */,
+				E14BBEBC2B0937130099529B /* Movie Section */,
+				E14BBEC12B0937E40099529B /* Profile Section */,
 			);
 			path = Module;
 			sourceTree = "<group>";
@@ -296,9 +338,12 @@
 			files = (
 				E1BC24452B06C3E80038CFDD /* Home.storyboard in Resources */,
 				E186B72C2B0787DF0069B4FD /* OTTContentTableViewCell.xib in Resources */,
+				E14BBEBE2B0937CD0099529B /* Profile.storyboard in Resources */,
 				E1BC244C2B06C6AA0038CFDD /* Color.xcassets in Resources */,
 				E1157FD52B07FE9900AB81F3 /* CarouselTableViewCell.xib in Resources */,
+				E14BBEBB2B0936EC0099529B /* Movie.storyboard in Resources */,
 				E1BC243D2B06C3260038CFDD /* LaunchScreen.storyboard in Resources */,
+				E14BBEB62B08F3830099529B /* MainTabBar.storyboard in Resources */,
 				E1BC243A2B06C3260038CFDD /* Assets.xcassets in Resources */,
 				E186B7312B078ADA0069B4FD /* MovieContentCollectionViewCell.xib in Resources */,
 			);
@@ -324,10 +369,13 @@
 				E19722762B07F118005429E9 /* OTTContentTVCell+CollectionView.swift in Sources */,
 				E1BC24532B06CA5D0038CFDD /* NetworkLayer+DataTask.swift in Sources */,
 				E1BC24662B06CF940038CFDD /* Constants.swift in Sources */,
+				E14BBEB92B0936DF0099529B /* MovieViewController.swift in Sources */,
 				E1BC24332B06C3230038CFDD /* SceneDelegate.swift in Sources */,
+				E14BBEC02B0937DC0099529B /* ProfileViewController.swift in Sources */,
 				E1BC24542B06CA5D0038CFDD /* NetworkLayer.swift in Sources */,
 				E1BC245C2B06CAE50038CFDD /* HomeModel.swift in Sources */,
 				E1BC24472B06C3FC0038CFDD /* HomeViewController.swift in Sources */,
+				E14BBEB42B08F3220099529B /* MainTabBarController.swift in Sources */,
 				E186B7302B078ADA0069B4FD /* MovieContentCollectionViewCell.swift in Sources */,
 				E1BC24632B06CF130038CFDD /* ConfigManager.swift in Sources */,
 				E186B72B2B0787DF0069B4FD /* OTTContentTableViewCell.swift in Sources */,
@@ -481,7 +529,7 @@
 				INFOPLIST_FILE = SugarBox/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Home;
+				INFOPLIST_KEY_UIMainStoryboardFile = MainTabBar;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -509,7 +557,7 @@
 				INFOPLIST_FILE = SugarBox/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Home;
+				INFOPLIST_KEY_UIMainStoryboardFile = MainTabBar;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

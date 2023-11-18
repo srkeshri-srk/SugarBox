@@ -8,13 +8,23 @@
 import Foundation
 
 struct Constants {
-    //Home Landing
+    //Home Section
     struct Home {
-        static let title = "SugarBox"
+        static let title = "Home"
         static let ottContentTableViewCell = "OTTContentTableViewCell"
         static let movieContentCollectionViewCell = "MovieContentCollectionViewCell"
         static let customHeaderTableViewCell = "CustomHeaderTableViewCell"
         static let carouselTableViewCell = "CarouselTableViewCell"
+    }
+    
+    //Movie Section
+    struct Movie {
+        static let title = "Movie"
+    }
+    
+    //Profile Section
+    struct Profile {
+        static let title = "Profile"
     }
     
     //Network Layer
