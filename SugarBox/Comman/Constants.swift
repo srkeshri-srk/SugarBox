@@ -11,6 +11,8 @@ struct Constants {
     //Home Section
     struct Home {
         static let title = "Home"
+        static let storyboard = "Home"
+        static let storyboardIdentifier = "HomeViewController"
         static let ottContentTableViewCell = "OTTContentTableViewCell"
         static let movieContentCollectionViewCell = "MovieContentCollectionViewCell"
         static let customHeaderTableViewCell = "CustomHeaderTableViewCell"
@@ -20,11 +22,15 @@ struct Constants {
     //Movie Section
     struct Movie {
         static let title = "Movie"
+        static let storyboard = "Movie"
+        static let storyboardIdentifier = "MovieViewController"
     }
     
     //Profile Section
     struct Profile {
         static let title = "Profile"
+        static let storyboard = "Profile"
+        static let storyboardIdentifier = "ProfileViewController"
     }
     
     //Network Layer
