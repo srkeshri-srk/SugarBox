@@ -46,7 +46,8 @@ class OTTContentTableViewCell: UITableViewCell {
     
     func getAssets() {
         guard let contents = contents else { return }
-            
+        assets.removeAll()
+
         for content in contents {
             if let assets = content.assets {
                 for asset in assets {
