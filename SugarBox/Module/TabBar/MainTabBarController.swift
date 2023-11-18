@@ -30,9 +30,10 @@ class MainTabBarController: UITabBarController {
         viewController2.tabBarItem = UITabBarItem(title: Constants.Movie.title, image: UIImage(systemName: "movieclapper"), tag: 1)
         viewController3.tabBarItem = UITabBarItem(title: Constants.Profile.title, image: UIImage(systemName: "person.crop.circle"), tag: 2)
 
-        UITabBar.appearance().backgroundColor = .blueIII
+        UITabBar.appearance().backgroundColor = .darkBlueI
         UITabBar.appearance().tintColor = .white
-        UITabBar.appearance().barTintColor = .blueIII
+        UITabBar.appearance().barTintColor = .darkBlueI
+        UITabBar.appearance().unselectedItemTintColor = .blueI
 
         // Set the view controllers for the tab bar
         self.viewControllers = [viewController1, viewController2, viewController3]
