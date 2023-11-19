@@ -23,8 +23,8 @@ class MovieContentCollectionViewCell: UICollectionViewCell {
         artworkImageView.layer.masksToBounds = true
     }
     
-    func configureUI(value: String?) {
-        guard let value = value, let url = URL(string: Constants.NetworkLayer.imageBaseURL + value) else { return }
+    func configureUI(value: String) {
+        guard let url = URL(string: value) else { return }
         
         let processor = DownsamplingImageProcessor(size: artworkImageView.bounds.size)
         artworkImageView.kf.indicatorType = .activity

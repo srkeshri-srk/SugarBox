@@ -14,7 +14,9 @@ extension OTTContentTableViewCell: UICollectionViewDelegate, UICollectionViewDat
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell: MovieContentCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: Constants.Home.movieContentCollectionViewCell, for: indexPath) as! MovieContentCollectionViewCell
-        cell.configureUI(value: assets[indexPath.row].sourcePath)
+        if let sourcePath = assets[indexPath.row].sourcePath {
+            cell.configureUI(value: Constants.NetworkLayer.imageBaseURL + sourcePath)
+        }
         return cell
     }
 

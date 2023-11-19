@@ -44,7 +44,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
             return nil
         case .ottContent:
             let view = tableView.dequeueReusableHeaderFooterView(withIdentifier: Constants.Home.customHeaderTableViewCell) as! CustomHeaderTableViewCell
-            view.setTitle(value: homeVM.getSectionTitle(index: section))
+            view.setTitle(value: homeVM.getSectionTitle(index: section).components(separatedBy: "-").first)
             return view
         }
     }
