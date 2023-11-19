@@ -12,6 +12,8 @@ class HomeViewController: UIViewController {
     
     let homeVM: HomeProtocol = HomeViewModel()
     var currentPage: Int = 1
+    let spinnerVC = SpinnerViewController()
+
     let spinner: UIActivityIndicatorView = {
         let spinner = UIActivityIndicatorView(style: .large)
         spinner.hidesWhenStopped = true
@@ -25,6 +27,9 @@ class HomeViewController: UIViewController {
         setupUI()
         setupTabelView()
         fetchData {
+            self.spinnerVC.willMove(toParent: nil)
+            self.spinnerVC.view.removeFromSuperview()
+            self.spinnerVC.removeFromParent()
             self.tableview.reloadData()
         }
     }
@@ -34,6 +39,7 @@ class HomeViewController: UIViewController {
         let textAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
         navigationController?.navigationBar.titleTextAttributes = textAttributes
         self.view.backgroundColor = .darkBlueI
+        createSpinnerView()
     }
     
     private func setupTabelView() {
@@ -44,6 +50,14 @@ class HomeViewController: UIViewController {
         tableview.register(UINib(nibName: Constants.Home.ottContentTableViewCell, bundle: nil), forCellReuseIdentifier: Constants.Home.ottContentTableViewCell)
         tableview.register(CustomHeaderTableViewCell.self, forHeaderFooterViewReuseIdentifier: Constants.Home.customHeaderTableViewCell)
     }
+    
+    private func createSpinnerView() {
+        addChild(spinnerVC)
+        spinnerVC.view.frame = view.frame
+        view.addSubview(spinnerVC.view)
+        spinnerVC.didMove(toParent: self)
+    }
+
     
     func fetchData(completion: @escaping ()->Void) {
         DispatchQueue.global(qos: .background).async {
