@@ -20,7 +20,7 @@ protocol HomeProtocol: AnyObject {
 
 
 class HomeViewModel: HomeProtocol {
-    private let networkLayerServices = NetworkLayerServices()
+    private let networkLayerServices: NetworkLayerServiceable = NetworkLayerServices()
     private var homeData: [DataModel]? = [DataModel]()
     private let perPage: Int = 5
     var paginationLimit: Int = 2

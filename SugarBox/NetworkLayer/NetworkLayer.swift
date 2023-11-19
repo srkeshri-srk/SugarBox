@@ -11,7 +11,12 @@
 
 import Foundation
 
-final class NetworkLayerServices {
+protocol NetworkLayerServiceable: AnyObject {
+    func dataTask<T: Codable>(_ api: APIRequest, completion: @escaping (_ result: Result<T, NetworkError>) -> Void)
+}
+
+
+final class NetworkLayerServices: NetworkLayerServiceable {
     let urlSession: URLSession
     private let configuration: URLSessionConfiguration
     
