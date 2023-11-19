@@ -60,6 +60,7 @@ class CarouselTableViewCell: UITableViewCell {
     }
     
     func configureData(info: [Content]?) {
+        contents?.removeAll()
         contents = info
     }
     

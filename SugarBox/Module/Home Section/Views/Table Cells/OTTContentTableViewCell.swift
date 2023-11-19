@@ -46,6 +46,7 @@ class OTTContentTableViewCell: UITableViewCell {
     }
     
     func configureData(info: [Content]?) {
+        contents?.removeAll()
         contents = info
     }
     

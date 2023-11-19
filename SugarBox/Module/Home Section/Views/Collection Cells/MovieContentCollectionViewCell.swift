@@ -23,7 +23,12 @@ class MovieContentCollectionViewCell: UICollectionViewCell {
         artworkImageView.layer.masksToBounds = true
     }
     
+    private func reset() {
+        artworkImageView.image = nil
+    }
+    
     func configureUI(value: String) {
+        reset()
         guard let url = URL(string: value) else { return }
         
         let processor = DownsamplingImageProcessor(size: artworkImageView.bounds.size)
