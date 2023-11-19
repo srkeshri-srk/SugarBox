@@ -28,7 +28,7 @@ class MovieContentCollectionViewCell: UICollectionViewCell {
         
         let processor = DownsamplingImageProcessor(size: artworkImageView.bounds.size)
         artworkImageView.kf.indicatorType = .activity
-        artworkImageView.kf.setImage(with: url, placeholder: UIImage(named: "SugarboxPlaceHolder"), options: [.processor(processor), .scaleFactor(UIScreen.main.scale), .transition(.fade(1)), .cacheOriginalImage])
+        artworkImageView.kf.setImage(with: url, placeholder: UIImage(named: "SugarboxPlaceHolder"), options: [.processor(processor), .scaleFactor(UIScreen.main.scale), .transition(.fade(0.2)), .cacheOriginalImage])
     }
 
 }
