@@ -66,6 +66,12 @@ struct Content: Codable {
     }
 }
 
+extension Content {
+    var thumbnailImageAsset: [Asset] {
+        assets?.filter{ $0.assetType == .image && $0.type == .thumbnailList } ?? []
+    }
+}
+
 // MARK: - Asset
 struct Asset: Codable {
     let assetType: AssetType?

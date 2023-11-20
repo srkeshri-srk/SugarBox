@@ -16,7 +16,7 @@ class ProfileViewController: UIViewController {
     }
 
     private func setupUI() {
-        title = Constants.Movie.title
+        title = Constants.Profile.title
         let textAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
         navigationController?.navigationBar.titleTextAttributes = textAttributes
         self.view.backgroundColor = .darkBlueI

@@ -18,9 +18,9 @@ class CarouselTableViewCell: UITableViewCell {
             pageControl.numberOfPages = assets.count
         }
     }
-    var contents: [Content]? {
+    var contents: [Content] = [] {
         didSet {
-            getAssets()
+            assets = contents.flatMap{ $0.thumbnailImageAsset }
         }
     }
     
@@ -60,25 +60,10 @@ class CarouselTableViewCell: UITableViewCell {
     }
     
     func configureData(info: [Content]?) {
-        contents?.removeAll()
-        contents = info
+        contents.removeAll()
+        contents = info ?? []
     }
-    
-    func getAssets() {
-        guard let contents = contents else { return }
-        assets.removeAll()
-            
-        for content in contents {
-            if let assets = content.assets {
-                for asset in assets {
-                    if asset.assetType == .image && asset.type == .thumbnailList {
-                        self.assets.append(asset)
-                    }
-                }
-            }
-        }
-    }
-    
+        
     @objc func onOrientationChange(notification: Notification) {
         print("onOrientationChange")
         colletionView.reloadData()

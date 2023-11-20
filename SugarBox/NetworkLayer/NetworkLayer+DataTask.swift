@@ -16,7 +16,7 @@ extension NetworkLayerServices {
         guard let urlRequest = URLGenerator.prepareURLRequest(with: api) else {
             return completion(.failure(.urlNotFound))
         }
-                    
+        
         self.urlSession.dataTask(with: urlRequest) { data, response, error in
             //Data Validation
             guard let data = data else {
@@ -31,9 +31,10 @@ extension NetworkLayerServices {
             }
             
             //Parsing
-            if let result: T = JSONParser().decode(data) {
+            do {
+                let result: T = try JSONParser().decode(data)
                 completion(.success(result))
-            } else {
+            } catch {
                 completion(.failure(.dataCantParse))
             }
             

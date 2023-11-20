@@ -14,7 +14,7 @@ import Foundation
 public class JSONParser {
     private let jsonDecoder = JSONDecoder()
     
-    func decode<T: Codable>(_ data: Data) -> T? {
-        return try? jsonDecoder.decode(T.self, from: data)
+    func decode<T: Decodable>(_ data: Data) throws -> T {
+        return try jsonDecoder.decode(T.self, from: data)
     }
 }
