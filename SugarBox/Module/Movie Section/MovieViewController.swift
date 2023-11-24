@@ -16,10 +16,8 @@ class MovieViewController: UIViewController {
     }
     
     private func setupUI() {
-        title = Constants.Movie.title
-        let textAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
-        navigationController?.navigationBar.titleTextAttributes = textAttributes
-        self.view.backgroundColor = .darkBlueI
+        setNavBar(title: Constants.Movie.title)
+        self.view.backgroundColor = Constants.Color.controllerBG
     }
 
 }

@@ -8,34 +8,40 @@
 import UIKit
 
 class MainTabBarController: UITabBarController {
-
+    
+    var controllers: [UIViewController] = [] {
+        didSet {
+            viewControllers = controllers
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupTabBar()
+        setupUI()
     }
     
     private func setupTabBar() {
-        let storyboard1 = UIStoryboard(name: Constants.Home.storyboard, bundle: nil)
-        let viewController1 = storyboard1.instantiateViewController(withIdentifier: Constants.Home.storyboardIdentifier)
+        let homeVC = UIStoryboard(name: Constants.Home.storyboard, bundle: nil).instantiateViewController(withIdentifier: Constants.Home.storyboardIdentifier)
+        let movieVC = UIStoryboard(name: Constants.Movie.storyboard, bundle: nil).instantiateViewController(withIdentifier: Constants.Movie.storyboardIdentifier)
+        let profileVC = UIStoryboard(name: Constants.Profile.storyboard, bundle: nil).instantiateViewController(withIdentifier: Constants.Profile.storyboardIdentifier)
 
-        let storyboard2 = UIStoryboard(name: Constants.Movie.storyboard, bundle: nil)
-        let viewController2 = storyboard2.instantiateViewController(withIdentifier: Constants.Movie.storyboardIdentifier)
+        homeVC.tabBarItem = UITabBarItem(title: Constants.Home.title, image: UIImage(systemName: "house"), tag: 0)
+        movieVC.tabBarItem = UITabBarItem(title: Constants.Movie.title, image: UIImage(systemName: "movieclapper"), tag: 1)
+        profileVC.tabBarItem = UITabBarItem(title: Constants.Profile.title, image: UIImage(systemName: "person.crop.circle"), tag: 2)
         
-        let storyboard3 = UIStoryboard(name: Constants.Profile.storyboard, bundle: nil)
-        let viewController3 = storyboard3.instantiateViewController(withIdentifier: Constants.Profile.storyboardIdentifier)
-
-        // Set up tab bar items
-        viewController1.tabBarItem = UITabBarItem(title: Constants.Home.title, image: UIImage(systemName: "house"), tag: 0)
-        viewController2.tabBarItem = UITabBarItem(title: Constants.Movie.title, image: UIImage(systemName: "movieclapper"), tag: 1)
-        viewController3.tabBarItem = UITabBarItem(title: Constants.Profile.title, image: UIImage(systemName: "person.crop.circle"), tag: 2)
-
+        let homeNC = UINavigationController(rootViewController: homeVC)
+        let movieNC = UINavigationController(rootViewController: movieVC)
+        let profileNC = UINavigationController(rootViewController: profileVC)
+        
+        self.viewControllers = [homeNC, movieNC, profileNC]
+    }
+    
+    private func setupUI() {
         UITabBar.appearance().backgroundColor = .darkBlueI
         UITabBar.appearance().tintColor = .white
         UITabBar.appearance().barTintColor = .darkBlueI
         UITabBar.appearance().unselectedItemTintColor = .blueI
-
-        // Set the view controllers for the tab bar
-        self.viewControllers = [viewController1, viewController2, viewController3]
     }
 }

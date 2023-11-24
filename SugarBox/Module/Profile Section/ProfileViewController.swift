@@ -16,10 +16,8 @@ class ProfileViewController: UIViewController {
     }
 
     private func setupUI() {
-        title = Constants.Profile.title
-        let textAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
-        navigationController?.navigationBar.titleTextAttributes = textAttributes
-        self.view.backgroundColor = .darkBlueI
+        setNavBar(title: Constants.Profile.title)
+        self.view.backgroundColor = Constants.Color.controllerBG
     }
 
 }

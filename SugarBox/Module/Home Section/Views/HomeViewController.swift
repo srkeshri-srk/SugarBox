@@ -35,10 +35,9 @@ class HomeViewController: UIViewController {
     }
     
     private func setupUI() {
-        title = Constants.Home.title
-        let textAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
-        navigationController?.navigationBar.titleTextAttributes = textAttributes
-        self.view.backgroundColor = .darkBlueI
+        setNavBar(title: Constants.Home.title)
+        self.view.backgroundColor = Constants.Color.controllerBG
+        
         createSpinnerView()
     }
     

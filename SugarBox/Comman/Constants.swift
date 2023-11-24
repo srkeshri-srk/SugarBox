@@ -18,6 +18,10 @@ struct Constants {
         static let ottContentCell = orientation.isLandscape ? (screenWidth - 10) * 0.18 : (screenWidth - 10) * 0.4
     }
     
+    struct Color {
+        static let controllerBG = UIColor.darkBlueI
+    }
+    
     //Home Section
     struct Home {
         static let title = "Home"
